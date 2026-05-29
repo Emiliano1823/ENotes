@@ -1,4 +1,4 @@
-# 📝 Notes App
+# 📝 ENotes App
 
 Aplicación web Full Stack para la gestión de notas desarrollada con **Spring Boot**, **Java**, **React**, **Node.js** y **Base de Datos H2**.
 
