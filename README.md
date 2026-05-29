@@ -1,20 +1,28 @@
-# 📝 ENotes App
+# 📝 ENotes
 
-Aplicación web Full Stack para la gestión de notas desarrollada con **Spring Boot**, **Java**, **React**, **Node.js** y **Base de Datos H2**.
+Aplicación web Full Stack para la gestión de notas desarrollada con **Spring Boot**, **Java**, **React**, **Vite** y **Base de Datos H2**.
 
 ## 📖 Descripción
 
-**Notes App** es una aplicación que permite crear, visualizar, editar y eliminar notas de forma sencilla e intuitiva. Este proyecto fue desarrollado para practicar la construcción de una arquitectura Full Stack moderna, integrando un backend RESTful con Spring Boot y un frontend dinámico con React.
+**ENotes** es una aplicación que permite crear, visualizar, editar y eliminar notas mediante una interfaz web moderna y sencilla.
+
+El proyecto está compuesto por:
+
+* **Backend:** API REST desarrollada con Spring Boot.
+* **Frontend:** Aplicación SPA desarrollada con React y Vite.
+* **Base de Datos:** H2 Database para almacenamiento de datos durante el desarrollo.
 
 ## ✨ Características
 
-* ➕ Crear nuevas notas.
-* 📋 Visualizar todas las notas almacenadas.
+* ➕ Crear notas.
+* 📋 Listar todas las notas.
 * ✏️ Editar notas existentes.
 * 🗑️ Eliminar notas.
-* 💾 Persistencia de datos mediante H2 Database.
-* 🔗 Comunicación entre frontend y backend mediante API REST.
-* 📱 Diseño responsive para diferentes tamaños de pantalla.
+* 🔄 Comunicación Frontend ↔ Backend mediante API REST.
+* 💾 Persistencia de datos con H2 Database.
+* 📱 Diseño responsive.
+
+---
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -29,8 +37,8 @@ Aplicación web Full Stack para la gestión de notas desarrollada con **Spring B
 ### Frontend
 
 * React
-* JavaScript
 * Vite
+* JavaScript
 * CSS3
 
 ### Herramientas
@@ -40,50 +48,74 @@ Aplicación web Full Stack para la gestión de notas desarrollada con **Spring B
 * GitHub
 * Postman
 
+---
+
 ## 📂 Estructura del Proyecto
 
 ```text
-notes-app/
+ENOTES/
 │
-├── backend/
-│   ├── src/main/java
-│   ├── src/main/resources
-│   └── pom.xml
+├── appNotes/                 # Backend Spring Boot
+│   ├── .mvn/
+│   ├── src/
+│   ├── target/
+│   ├── pom.xml
+│   ├── mvnw
+│   └── mvnw.cmd
 │
-├── frontend/
-│   ├── src
-│   ├── public
-│   └── package.json
+├── notasapp/                 # Frontend React + Vite
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── package.json
+│   ├── vite.config.js
+│   └── index.html
 │
 └── README.md
 ```
+
+---
 
 ## 🚀 Instalación y Ejecución
 
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/notes-app.git
-cd notes-app
+git clone https://github.com/TU-USUARIO/ENotes.git
+cd ENotes
 ```
+
+---
 
 ### 2. Ejecutar el Backend
 
 ```bash
-cd backend
-mvn spring-boot:run
+cd appNotes
+./mvnw spring-boot:run
 ```
 
-El backend se ejecutará en:
+En Windows:
+
+```bash
+mvnw.cmd spring-boot:run
+```
+
+El backend estará disponible en:
 
 ```text
 http://localhost:8080
 ```
 
+---
+
 ### 3. Ejecutar el Frontend
 
 ```bash
-cd frontend
+cd notasapp
 npm install
 npm run dev
 ```
@@ -94,9 +126,11 @@ El frontend estará disponible en:
 http://localhost:5173
 ```
 
+---
+
 ## 🗄️ Base de Datos H2
 
-La consola de administración de H2 puede consultarse en:
+La consola H2 puede consultarse desde:
 
 ```text
 http://localhost:8080/h2-console
@@ -106,9 +140,11 @@ Configuración por defecto:
 
 ```text
 JDBC URL: jdbc:h2:mem:testdb
-Username: sa
+User Name: sa
 Password:
 ```
+
+---
 
 ## 📡 API REST
 
@@ -120,39 +156,51 @@ Password:
 | PUT    | `/notes/{id}` | Actualizar una nota     |
 | DELETE | `/notes/{id}` | Eliminar una nota       |
 
+---
+
 ## 🎯 Objetivos del Proyecto
 
 * Implementar operaciones CRUD completas.
-* Desarrollar una API REST con Spring Boot.
+* Construir una API REST con Spring Boot.
 * Consumir servicios REST desde React.
-* Gestionar persistencia de datos con JPA y H2.
+* Gestionar persistencia de datos mediante JPA.
 * Aplicar buenas prácticas de desarrollo Full Stack.
+
+---
 
 ## 📸 Capturas de Pantalla
 
-Agrega aquí imágenes o GIFs que muestren el funcionamiento de la aplicación.
+### Pantalla Principal
+
+Agrega aquí las capturas de tu aplicación:
 
 ```markdown
-![Pantalla Principal](./screenshots/home.png)
+![ENotes Home](./screenshots/home.png)
+<img width="760" height="824" alt="image" src="https://github.com/user-attachments/assets/e653cf99-de74-4610-afd5-dd0eb04679df" />
+
 ```
+
+---
 
 ## 🔮 Mejoras Futuras
 
-* Implementar autenticación de usuarios.
-* Utilizar una base de datos relacional como MySQL o PostgreSQL.
-* Agregar búsqueda y filtrado de notas.
-* Incorporar categorías o etiquetas.
-* Desplegar la aplicación en la nube.
+* Sistema de autenticación y autorización.
+* Categorías para notas.
+* Buscador de notas.
+* Migración a MySQL o PostgreSQL.
+* Dockerización de la aplicación.
+* Despliegue en AWS o Azure.
+
+---
 
 ## 👨‍💻 Autor
 
 **Jesús Emiliano López Espinoza**
 
-Ingeniero en Sistemas Computacionales apasionado por el desarrollo de software, la programación Full Stack y la creación de soluciones tecnológicas innovadoras.
+Ingeniero en Sistemas Computacionales apasionado por el desarrollo de software y las tecnologías Full Stack.
 
-* GitHub: https://github.com/TU-USUARIO
-* LinkedIn: https://linkedin.com/in/TU-PERFIL
+* GitHub: https://github.com/Emiliano1823
 
 ---
 
-⭐ Si este proyecto te resulta útil, considera darle una estrella al repositorio.
+⭐ Si te gustó este proyecto, considera darle una estrella al repositorio.
